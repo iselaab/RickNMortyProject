@@ -1,0 +1,64 @@
+.card{
+    background-color: rgb(56, 56, 62);
+}
+.card-body{
+    padding: 10px 6px 0 8px;
+}
+.card:hover{
+    background-color: rgb(74, 74, 80);
+}
+.fa-circle{
+    font-size: 5px;
+}
+.txt{
+    color: #7c7e7f;
+    font-family: 'Mukta', sans-serif;
+    font-size: 11px;
+}
+.response{
+    color:white;
+    font-family: 'Mukta', sans-serif;
+    font-size: 11.5px;
+    margin-bottom: 8px;
+}
+.name{
+    color:white;
+    font-family: 'Mukta', sans-serif;
+    font-weight:700;
+    font-size: 18.5px;
+}
+
+@media screen and (max-width: 1024px) and (min-width:769px){
+    .name{
+        font-size:17px;
+        line-height: 14px;
+        padding-bottom: 4px;
+
+    }    
+    .response{
+        font-size: 10.5px;
+
+    }
+    .txt{
+        font-size: 10.5px;
+
+    }    
+}
+@media screen and (max-width: 425px){
+    .name{
+        font-size: 22px;
+
+    }    
+    .response{
+        font-size: 15px;
+
+    }
+    .txt{
+        font-size: 15px;
+
+    }
+    .card-body{
+        padding-bottom: 10px;
+    }
+    
+}

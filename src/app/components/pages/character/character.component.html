@@ -1,0 +1,41 @@
+<div class="container-fluid">
+  <div class="row">
+    <button class="btn backbutton" routerLink="/">
+      <i class="fas fa-arrow-alt-left"></i>
+    </button>
+  </div>
+</div>
+
+<div class="container-xl" *ngIf="characterDataLoaded | async">
+    <div class="row col-12 mx-0 my-4">
+      
+        <div class="card col-12 col-md-8 px-0 mb-5">
+            <div class="row no-gutters">
+              <div class="col-md-5">
+                <img src="{{character.image}}" class="card-img" alt="{{character.name}} image">
+              </div>
+              <div class="col-md-7">
+                <div class="card-body">
+                  <h5 class="card-title name my-0">{{character.name}}</h5>
+                  <p class="response"><em class="fas fa-circle" [ngStyle]="{'color':status(character.status)}"></em> {{character.status}} - {{character.species}}</p>
+                  <p class="txt my-0">Last known location:</p>
+                  <p class="response">{{character.location.name}}</p>
+                  <p class="txt my-0">First seen in:</p>
+                  <p class="response">{{episodes[0].name}}</p>
+                  <i class="far fa-star" *ngIf="!markedAsFavorite()" title="Add to my favorites" type="button" (click)="markAsFavorite()"></i>
+                  <i class="fas fa-star"  *ngIf="markedAsFavorite()" title="Favorite"></i>
+                </div>
+              </div>
+            </div>
+        </div>
+
+    <div class="col-12 col-md-4 text-center px-0 px-md-4">
+        <h3 class="text-light">Episodes where <b>{{character.name}}</b> appears</h3>
+        <p class="text-light">( Select one to see it's info ) </p>
+        <select name="Episodes" size="3" class="custom-select text-center">
+            <option class="option" *ngFor="let episode of episodes" value="{{episode.id}}" (click)="episodeInfo(episode)" >{{episode.episode}}</option>            
+        </select>    
+    </div>
+        
+  </div>    
+</div>

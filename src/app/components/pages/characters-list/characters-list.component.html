@@ -1,0 +1,32 @@
+<div class="container-xl">
+  <div class="row justify-content-center my-4">
+      <div class="col-11 col-md-6 col-lg-4 px-2"*ngFor="let character of characters; let index">
+          <div class="card mb-3"  type="button" routerLink="/character/{{character.id}}" >
+              <div class="row no-gutters">
+                <div class="col-md-5">
+                  <img src="{{character.image}}" class="card-img" alt="{{character.name}} image">
+                </div>
+                <div class="col-md-7">
+                  <div class="card-body">
+                    <h5 class="card-title name my-0">{{character.name}}</h5>
+                    <p class="response"><em class="fas fa-circle" [ngStyle]="{'color':status(character.status)}"></em> {{character.status}} - {{character.species}}</p>
+                    <p class="txt my-0">Last known location:</p>
+                    <p class="response">{{character.location.name}}</p>
+                    <p class="txt my-0">First seen in:</p>
+                    <p class="response my-0">{{character.episode[0]}}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+      </div>
+  </div>
+  <div class="row text-light name px-0 justify-content-center">
+    <div class="px-0 " >
+      
+      <em type="button" (click)="previous()" *ngIf="previousIcon" class="fas fa-chevron-left"></em>
+      <span class="mx-2">Page {{pageNumber}} </span>
+      <em type="button" (click)="next()" *ngIf="nextIcon" class="fas fa-chevron-right"></em>
+        
+    </div>
+  </div>
+</div>

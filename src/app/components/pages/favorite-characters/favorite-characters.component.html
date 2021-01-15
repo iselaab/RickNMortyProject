@@ -1,0 +1,42 @@
+<div class="container">
+  <div class="row justify-content-center"> 
+    <table class="col-11 col-lg-10 table-responsive text-center table-bordered table-dark my-4 px-0" *ngIf="favoritesExists() > 1">
+      <thead>
+        <tr>
+          <th scope="col"></th>
+          <th scope="col">Name</th>
+          <th scope="col">Status</th>
+          <th scope="col">Location</th>
+          <th scope="col">First seen in</th>
+          <th scope="col"></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let character of characters; let index">
+          <td class="px-0"> <img src="{{character.image}}" alt="{{character.name}} image" class="img_character px-0"></td>
+          <td class="name">{{character.name}}</td>
+          <td class="status">{{character.status}}</td>
+          <td class="location">{{character.location.name}}</td>
+          <td class="episode">{{character.episode[0]}}</td>
+          <td class="button"> <button type="button" (click)="confirmDelete(index)" class="btn btn-danger px-" ><i class="fas fa-minus-circle"></i> </button> </td>
+        </tr>
+      </tbody>    
+    </table>
+  </div>
+    
+    <div *ngIf="favoritesExists() === 1" class="mt-4 mb-5 text-center">
+      <h1 class="text-light">Please select one more character as favorite to see your favorites here.</h1>
+    </div>
+    
+    <div *ngIf="favoritesExists() === 0" class="mt-4 text-center">
+      <h1 class="text-light">
+        You don't have any favorite character yet.
+      </h1>
+       
+    </div>
+    
+    <div class="row justify-content-center mb-5">
+      <button type="button" *ngIf="charactersId != undefined" (click)="deleteAll()" class="btn btn-danger mx-3">Delete all</button>    
+    </div>
+
+</div>

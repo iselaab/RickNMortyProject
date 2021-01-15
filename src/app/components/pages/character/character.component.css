@@ -1,0 +1,83 @@
+.fa-star{
+    color:#ffd700;
+    position: absolute;
+    top: 13px;
+    right: 13px;
+    font-size: 23px;
+}
+.backbutton{
+    background-color: #00afc7;
+    margin: 1rem 0 0 1rem;
+}
+select{
+    background-color:rgb(176, 176, 179) ;
+}
+option:hover{
+    background-color: rgb(158, 158, 158)
+}
+.option{
+    border-bottom: 0.5px solid rgb(218, 216, 216) !important;
+    color:black
+}
+.card{
+    background-color: rgb(56, 56, 62);
+}
+.card-body{
+    padding: 18px 50px 0 18px;
+}
+.fa-circle{
+    font-size: 10px;
+}
+.txt{
+    color: #7c7e7f;
+    font-family: 'Mukta', sans-serif;
+    font-size: 18px;
+}
+.response{
+    color:white;
+    font-family: 'Mukta', sans-serif;
+    font-size: 18.5px;
+    margin-bottom: 15px;
+}
+.name{
+    color:white;
+    font-family: 'Mukta', sans-serif;
+    font-weight:700;
+    font-size: 31px;
+}
+
+@media screen and (max-width: 768px) and (min-width:426px){
+    .fa-star{
+        font-size: 20px;
+    }
+    .fa-circle{
+        font-size:7px;
+    }
+    .txt{
+        color: #7c7e7f;
+        font-family: 'Mukta', sans-serif;
+        font-size: 14.5px;
+    }
+    .response{
+        color:white;
+        font-family: 'Mukta', sans-serif;
+        font-size: 15px;
+        margin-bottom: 12px;
+    }
+    .name{
+        color:white;
+        font-family: 'Mukta', sans-serif;
+        font-weight:700;
+        font-size: 25px;
+    } 
+    .card-body{
+        padding: 16px 36px 0 18px;
+    }
+    h3{
+        font-size: 20px;
+    }
+    p{
+        font-size: 15px;
+    }
+
+}

@@ -1,0 +1,31 @@
+.img_RyM{
+    height: 40px;
+    align-items: center;
+}
+.img_logo{
+    height: 55px;
+    align-items: center;
+}
+.nav_color{
+    background-color: rgb(34, 43, 53);
+}
+.title{
+    margin-left: 1rem;
+    color:#04afcb;
+    text-shadow: -0.35px 0 black, 0 0.35px black, 0.35px 0 black, 0 -0.35px black, -1px 0 #a9d866, 0 1px #a9d866, 1px 0 #a9d866, 0 -1px #a9d866,  0 0 3px #a9d866, 0 0 5px #69b64f;
+    font-family: 'Jolly Lodger', cursive;
+    font-size: 33px;
+}
+.navbar-light .navbar-nav .nav-link{
+    color:#6dab4b;
+    font-size: 18px;
+    font-family: 'Overpass', sans-serif;
+}
+
+/*
+-2px 0 #a9d866, 0 2px #a9d866, 2px 0 #a9d866, 0 2px #a9d866,
+*/
+@media screen and (max-width: 375px){
+    
+    
+}

@@ -1,0 +1,24 @@
+.img_character{
+    height: 160px;
+}
+td, th{
+padding: 0 1.3rem;
+}
+tr{
+margin: 1rem 0;
+}
+.name{
+    width: 165px;
+}
+.status{
+    width: 110px;
+}
+.location{
+    width: 230px;
+}
+.episode{
+    width: 162px;
+}
+.button{
+    width: 120px;
+}
