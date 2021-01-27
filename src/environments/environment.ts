@@ -5,6 +5,7 @@
 export const environment = {
   production: false,
   urlAPI: 'https://rickandmortyapi.com/api',
+  urlCustomizedAPI: 'http://localhost:4000/RickAndMortyAPI',
 };
 
 /*

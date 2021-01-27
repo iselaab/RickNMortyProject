@@ -10,6 +10,7 @@ import { PAGE } from '../constants/interfaces/page-data';
 export class CharactersService {
 
   url = environment.urlAPI;
+  urlNewAPI = environment.urlCustomizedAPI;
 
   constructor(private httpClient : HttpClient) { }
 
@@ -17,7 +18,11 @@ export class CharactersService {
     return this.httpClient.get<[CHARACTER]>(`${this.url}/character/${idList}`);
   }
 
+  getCharactersPage(pageNumber:number){
+    return this.httpClient.get<PAGE>(`${this.urlNewAPI}/character?pageSize=12&page=${pageNumber}`);
+  }
+
   getCharacter(id:string){
-    return this.httpClient.get<CHARACTER>(`${this.url}/character/${id}`);
+    return this.httpClient.get<CHARACTER>(`${this.urlNewAPI}/character/${id}`);
   }
 }

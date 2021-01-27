@@ -3,6 +3,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 import { of } from 'rxjs';
 import { FAKECHARACTER } from 'src/app/constants/fake-character';
+import { FAKEPAGE } from 'src/app/constants/fake-page';
 import { FAKEEPISODES } from 'src/app/constants/fakeEpisodes';
 import { CharactersService } from 'src/app/services/characters.service';
 import { EpisodesService } from 'src/app/services/episodes.service';
@@ -16,6 +17,10 @@ export class MockCharactersService {
         arrayOfCharacters.push(FAKECHARACTER);
       }
       return of(arrayOfCharacters)
+  }
+  getCharactersPage(pageNumber:number){
+    
+    return of(FAKEPAGE);
   }
   
 }
@@ -55,8 +60,11 @@ describe('CharactersListComponent', () => {
   });
 
   it('page should have 12 characters',()=>{
-    component.getCharacters([1,2,3,4,5,6,7,8,9,10,11,12]);  
-    expect(component.characters.length).toBeGreaterThan(0);
+    //component.getCharacters([1,2,3,4,5,6,7,8,9,10,11,12]);  
+    component.getCharacters(1);  
+    console.log(component.characters.length);
+    expect(component.characters.length).toBeGreaterThan(11);
+    expect(component.characters.length).toBeLessThan(13);
 
     fixture.detectChanges();
     const elements = fixture.debugElement.queryAll(By.css('.card'));

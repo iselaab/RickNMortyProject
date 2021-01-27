@@ -2,13 +2,14 @@ export interface PAGE{
 
     "info": {
       "count": number,
-      "pages": number,
-      "next": string | null ,
-      "prev": string | null
+      "totalPages": number,
+      "pageSize": number,
+      "page": number
     },
     "results": [
       {
         "id": number,
+        "_id": "",
         "name": "",
         "status": "",
         "species": "",
