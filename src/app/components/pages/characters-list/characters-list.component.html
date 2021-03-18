@@ -1,4 +1,5 @@
-<div class="container-xl" *ngIf="charactersDataLoaded | async">
+<!-- <div class="container-xl" *ngIf="charactersDataLoaded | async"> -->
+<div class="container-xl" *ngIf="imcharged">
   <div class="row justify-content-center my-4">
       <div class="col-11 col-md-6 col-lg-4 px-2"*ngFor="let character of characters; let index">
           <div class="card mb-3"  type="button" routerLink="/character/{{character.id}}" >
