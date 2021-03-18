@@ -18,6 +18,7 @@ export class CharactersListComponent {
   nextIcon : boolean = true;
   pageNumber: number = 1;
   totalPages !: number;
+  imcharged !: boolean;
 
   constructor(private charactersService: CharactersService,
               private episodeService : EpisodesService) { 
@@ -52,6 +53,7 @@ export class CharactersListComponent {
           .subscribe(episode => {
             this.characters[i].episode[0]=episode.name;
             this.charactersDataLoaded = Promise.resolve(true);
+            this.imcharged = true;
 
           });
         }
